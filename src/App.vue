@@ -3,6 +3,11 @@
     <header>
       <img alt="Vue logo" src="./assets/logo.png">
     </header>
+    <p>{{ message }}</p>
+    <h1>シカくん初号機</h1>
+    <h2>{{ PageTitle }}</h2>
+    
+    
     <SimulateSavings msg="内臓も最大限いただきます"/>
   </div>
 </template>
@@ -12,6 +17,12 @@ import SimulateSavings from './components/SimulateSavings.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      message : "鹿を起点に、新たな循環を",
+      PageTitle : "バイオガス生産量シミュレーター"
+    }
+  },
   components: {
     SimulateSavings
   }
@@ -25,24 +36,36 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 5rem auto;
   display: flex;
   justify-content: center;
-}
-header{
-  position: absolute;
-  top: 0;
+  flex-direction: column;
   width: 100%;
+}
+header{  
+  /* width: 100vw; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin: 1.5rem auto;
   
 }
-header img{  
-  flex-grow: none;
-  flex-shrink: none;  
-  width:200px;  
+header img{   
+  width:150px;  
+  display: inline-block;
+  display: flex;
+  margin: auto;
+
+  justify-content: center;
+}
+h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem auto 0rem;
+}
+h2 {
+  margin: 0.5rem auto 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 </style>

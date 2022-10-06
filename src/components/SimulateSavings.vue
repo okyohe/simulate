@@ -1,7 +1,6 @@
 <template>
   <div class="simulate">
     
-    
       <b-field label="年間処理頭数（頭/年） " >
           <b-input type="number" v-model="deer_numbers"></b-input>
       </b-field>      
@@ -45,7 +44,8 @@
       <div class="generated" v-show="is_generate">
         <p>節約できる金額は{{SimulatedSavingsEnergyCost}}円/年です。</p>
         <p>概算になりますので、詳しいお見積りはご相談の際に共有させていただきます。</p>
-        <b-button @click="contact" type="is-primary is-light">お問い合わせはこちら</b-button>
+        <p class="mt-4">deerveryone@gmail.com</p>
+        <p>070-8380-0865</p>
       </div> 
       <b-button @click="simulate" type="is-primary">計算する</b-button>
       <b-button @click="reset" type="is-primary is-light">リセットする</b-button>            
@@ -86,6 +86,15 @@ export default {
               gas_type: "propan",
               // SimulatedSavingsEnergyCost: "???",
               isDetail: false,
+
+              //contact component つくりたい,
+              txtData: "",
+              address1: 'メールアドレス',
+              address2: '@co.jp',
+              address: this.address1+this.address2,
+              subject: '○○の件について',
+              body: 'メール本文' + '%0D%0A' + this.txtData,
+              
             }
         },
   computed:{
@@ -147,9 +156,7 @@ export default {
         this.SimulatedSavingsEnergyCost= "???";
         this.is_generate = false;
       },
-      contact: function(){
-        this.is_generate = !this.is_generate
-      }
+
   }
 }
 </script>

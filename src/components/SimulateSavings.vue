@@ -144,7 +144,8 @@ export default {
         
       },
       reset: function(){
-        this.SimulatedSavingsEnergyCost= "???"
+        this.SimulatedSavingsEnergyCost= "???";
+        this.is_generate = false;
       },
       contact: function(){
         this.is_generate = !this.is_generate

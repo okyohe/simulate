@@ -3,9 +3,9 @@
     <header>
       <img alt="Vue logo" src="./assets/logo.png">
     </header>
-    <p>{{ message }}</p>
-    <h1>シカくん初号機</h1>
-    <h2>{{ PageTitle }}</h2>
+    <!-- <p>{{ message }}</p> -->
+    <h1>{{ PageTitle }}</h1>
+    <h2>{{ PageSubtitle }}</h2>
     
     
     <SimulateSavings msg="内臓も最大限いただきます"/>
@@ -20,7 +20,8 @@ export default {
   data(){
     return{
       message : "鹿を起点に、新たな循環を",
-      PageTitle : "バイオガス生産量シミュレーター"
+      PageTitle : "バイオガス生産量シミュレーター",
+      PageSubtitle: "どれくらいガスや電気が作れるのでしょうか？"
     }
   },
   components: {
@@ -65,7 +66,7 @@ h1{
 h2 {
   margin: 0.5rem auto 3rem;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 </style>

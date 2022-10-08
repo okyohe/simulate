@@ -41,8 +41,9 @@
             <b-slider v-model="ingridient_ratio_percent"></b-slider>
         </b-field>      
       </section> 
-      <div class="generated" v-show="is_generate">
-        <p>節約できる金額は{{SimulatedSavingsEnergyCost}}円/年です。</p>
+      <div class="generated" v-show="is_generate">        
+        <p>一年間で生産できるガス量は<span class="bold">{{amount_gas}}㎥</span>、節約できるガス料金は<span class="bold">{{SimulatedSavingsEnergyCost}}円/年</span>です。</p>
+        <p>同じく一年間で生産できる電気量は<span class="bold">{{amount_electricity}}kWh</span>、節約できる電気料金は<span class="bold">{{SimulatedSavingElectricityCost}}円/年</span>です。電気だとエネルギー効率が落ちるためガスでお使いいただくことをおすすめしております。</p>
         <p>概算になりますので、詳しいお見積りはご相談の際に共有させていただきます。</p>
         <p class="mt-4">deerveryone@gmail.com</p>
         <p>070-8380-0865</p>
@@ -114,7 +115,10 @@ export default {
       return this.gabage_amount * this.unitcost_garbage;
     },
     amount_gas: function(){
-      return this.amount_ingridient * this.dry_weight *  this.vs_ratio * this.ratio_metan //(m3) 
+      return Math.round(this.amount_ingridient * this.dry_weight *  this.vs_ratio * this.ratio_metan).toLocaleString(); //(m3) 
+    },
+    amount_electricity: function(){
+      return Math.round(this.amount_gas*37000*0.25/3600)
     },
     // output
     SimulatedSavingGarbageCost: function() {
@@ -125,6 +129,9 @@ export default {
     },
     SimulatedSavingsCitygasCost: function(){
       return Math.round(this.amount_gas * this.unitcost_citygas);        
+    },
+    SimulatedSavingElectricityCost: function(){
+      return Math.round(this.amount_electricity * 30).toLocaleString();
     },
     SimulatedSavingsEnergyCost: function(){
 
@@ -138,9 +145,8 @@ export default {
     }
   },
   methods : {
-      simulate:function(){      
+      simulate:function(){            
         this.is_generate = true;  
-
         // if(this.gas_type=="city"){
           
         //   this.SimulatedSavingsEnergyCost = this.SimulatedSavingsCitygasCost.toLocaleString();                    
@@ -197,6 +203,12 @@ a {
 .generated{
   margin: 4rem auto;
   font-family: bold;
+  background-color:#f2effb ;
+  border-radius: 5%;
+  padding: 2rem;
+}
+.bold{
+  font-weight: bold;
 }
 .simulate .field{
   width: 100%

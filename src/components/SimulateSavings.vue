@@ -72,8 +72,8 @@ export default {
               // input data
               deer_numbers:150,
               average_weight:60,
-              garbage_ratio_percent:70,              
-              ingridient_ratio_percent:50,              
+              garbage_ratio_percent:65,              
+              ingridient_ratio_percent:30,              
               unitcost_garbage:35,
               unitcost_propangas: 690,
               unitcost_citygas: 250,

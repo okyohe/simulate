@@ -15,6 +15,7 @@
 <script>
 import SimulateSavings from './components/SimulateSavings.vue'
 
+
 export default {
   name: 'App',
   data(){

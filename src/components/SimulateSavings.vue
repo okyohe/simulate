@@ -42,14 +42,15 @@
         </b-field>      
       </section> 
       <div class="generated" v-show="is_generate">        
-        <p>一年間で生産できるガス量は<span class="bold">{{amount_gas}}㎥</span>、節約できるガス料金は<span class="bold">{{SimulatedSavingsEnergyCost}}円/年</span>です。</p>
-        <p>同じく一年間で生産できる電気量は<span class="bold">{{amount_electricity}}kWh</span>、節約できる電気料金は<span class="bold">{{SimulatedSavingElectricityCost}}円/年</span>です。電気だとエネルギー効率が落ちるためガスでお使いいただくことをおすすめしております。</p>
+        <p>一年間で生産できるガス量は<span class="bold">{{amount_gas.toLocaleString()}}㎥</span><br/>節約できるガス料金は<span class="bold">{{SimulatedSavingsEnergyCost.toLocaleString()}}円/年</span>です。</p>
+        <!-- <p>同じく一年間で生産できる電気量は<span class="bold">{{amount_electricity.toLocaleString()}}kWh</span>、節約できる電気料金は<span class="bold">{{SimulatedSavingElectricityCost.toLocaleString()}}円/年</span>です。電気だとエネルギー効率が落ちるためガスでお使いいただくことをおすすめしております。</p> -->
+        <p>現在の産業廃棄費用は{{allcost_garbage.toLocaleString()}}円、<br/>節約できる産業廃棄費用は<span class="bold">{{SimulatedSavingGarbageCost.toLocaleString()}} 円/年</span>です。</p>
         <p>概算になりますので、詳しいお見積りはご相談の際に共有させていただきます。</p>
         <p class="mt-4">deerveryone@gmail.com</p>
         <p>070-8380-0865</p>
       </div> 
-      <b-button @click="simulate" type="is-primary">計算する</b-button>
-      <b-button @click="reset" type="is-primary is-light">リセットする</b-button>            
+      <b-button @click="simulate" v-if="!is_generate" type="is-success">計算する</b-button>
+      <b-button @click="reset" v-if="is_generate" type="is-success is-light">リセットする</b-button>            
            
       
   </div>
@@ -83,6 +84,7 @@ export default {
               vs_weight: false,
               ratio_metan: 0.527,
               // function
+              
               is_generate:false,
               gas_type: "propan",
               // SimulatedSavingsEnergyCost: "???",
@@ -110,18 +112,18 @@ export default {
     },
     amount_ingridient: function(){
       return this.deer_numbers * this.average_weight * this.ingridient_ratio;
-    },
-    allcost_garbage: function(){
-      return this.gabage_amount * this.unitcost_garbage;
-    },
+    },    
     amount_gas: function(){
-      return Math.round(this.amount_ingridient * this.dry_weight *  this.vs_ratio * this.ratio_metan).toLocaleString(); //(m3) 
+      return Math.round(this.amount_ingridient * this.dry_weight *  this.vs_ratio * this.ratio_metan); //(m3) 
     },
     amount_electricity: function(){
       return Math.round(this.amount_gas*37000*0.25/3600)
     },
-    // output
-    SimulatedSavingGarbageCost: function() {
+    allcost_garbage: function(){
+      return Math.round(this.gabage_amount * this.unitcost_garbage);
+    },
+    // output    
+    SimulatedSavingGarbageCost: function(){
       return Math.round(this.allcost_garbage * this.ingridient_ratio);
     },
     SimulatedSavingsPropangasCost: function(){
@@ -131,14 +133,14 @@ export default {
       return Math.round(this.amount_gas * this.unitcost_citygas);        
     },
     SimulatedSavingElectricityCost: function(){
-      return Math.round(this.amount_electricity * 30).toLocaleString();
+      return Math.round(this.amount_electricity * 30);
     },
     SimulatedSavingsEnergyCost: function(){
 
       if(this.gas_type=="city"){          
-          return this.SimulatedSavingsCitygasCost.toLocaleString();                    
+          return this.SimulatedSavingsCitygasCost;                    
         }else if(this.gas_type=="propan"){          
-          return this.SimulatedSavingsPropangasCost.toLocaleString();          
+          return this.SimulatedSavingsPropangasCost;          
         }else{
           return "大変申し訳ございません。エラーが発生しました。"
         }
@@ -146,7 +148,7 @@ export default {
   },
   methods : {
       simulate:function(){            
-        this.is_generate = true;  
+        this.is_generate = true;          
         // if(this.gas_type=="city"){
           
         //   this.SimulatedSavingsEnergyCost = this.SimulatedSavingsCitygasCost.toLocaleString();                    
@@ -161,6 +163,7 @@ export default {
       reset: function(){
         this.SimulatedSavingsEnergyCost= "???";
         this.is_generate = false;
+        
       },
 
   }
@@ -201,9 +204,9 @@ a {
   margin: 1rem auto;
 }
 .generated{
-  margin: 4rem auto;
+  margin: 1rem auto;
   font-family: bold;
-  background-color:#f2effb ;
+  background-color: #effaf5 ;
   border-radius: 5%;
   padding: 2rem;
 }

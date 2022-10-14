@@ -1,32 +1,25 @@
 <template>
   <div id="app">
     <header>
+      
       <img alt="Vue logo" src="./assets/logo.png">
     </header>
     <!-- <p>{{ message }}</p> -->
-    <h1>{{ PageTitle }}</h1>
-    <h2>{{ PageSubtitle }}</h2>
     
+    <router-view />
     
-    <SimulateSavings msg="内臓も最大限いただきます"/>
+    <MenuBar/>
   </div>
 </template>
 
 <script>
-import SimulateSavings from './components/SimulateSavings.vue'
 
+import MenuBar from './components/MenuBar.vue'
 
 export default {
-  name: 'App',
-  data(){
-    return{
-      message : "鹿を起点に、新たな循環を",
-      PageTitle : "バイオガス生産量シミュレーター",
-      PageSubtitle: "どれくらいガスや電気が作れるのでしょうか？"
-    }
-  },
-  components: {
-    SimulateSavings
+  name: 'App',  
+  components: {    
+    MenuBar
   }
 }
 </script>
@@ -37,7 +30,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1d3247;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -59,15 +52,8 @@ header img{
 
   justify-content: center;
 }
-h1{
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 2rem auto 0rem;
-}
-h2 {
-  margin: 0.5rem auto 3rem;
-  font-weight: bold;
-  font-size: 1rem;
+a{
+  color: #7957d5;
 }
 
 </style>

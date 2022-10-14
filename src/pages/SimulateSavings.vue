@@ -1,6 +1,8 @@
 <template>
-  <div class="simulate">
-    
+  <div class="page">
+    <h1>バイオガス生産量シミュレーター</h1>
+    <h2>どれくらいガスや電気が作れるのでしょうか？</h2>
+    <div class="simulate">
       <b-field label="年間処理頭数（頭/年） " >
           <b-input type="number" v-model="deer_numbers"></b-input>
       </b-field>      
@@ -51,8 +53,7 @@
       </div> 
       <b-button @click="simulate" v-if="!is_generate" type="is-primary">計算する</b-button>
       <b-button @click="reset" v-if="is_generate" type="is-primary is-light">リセットする</b-button>            
-           
-      
+    </div>      
   </div>
 </template>
 
@@ -67,7 +68,7 @@ export default {
   name: 'SimulateSavings',
   props: {
     msg: String,    
-  },
+  },  
   data() {
             return {
               // input data
@@ -172,6 +173,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h1{
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem auto 0rem;
+}
+h2 {
+  margin: 0.5rem auto 3rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
 .simulate{
   margin: auto 2rem;
   
@@ -181,6 +192,7 @@ export default {
   /* display: none */
   margin:1.5rem auto;
 }
+
 h3 {
   margin: 2rem 0 3rem;
   font-weight: bold;
@@ -194,9 +206,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #7957d5;
-}
+
 .button{
   margin:1rem auto
 }

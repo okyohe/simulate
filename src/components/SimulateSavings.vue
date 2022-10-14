@@ -49,8 +49,8 @@
         <p class="mt-4">deerveryone@gmail.com</p>
         <p>070-8380-0865</p>
       </div> 
-      <b-button @click="simulate" v-if="!is_generate" type="is-success">計算する</b-button>
-      <b-button @click="reset" v-if="is_generate" type="is-success is-light">リセットする</b-button>            
+      <b-button @click="simulate" v-if="!is_generate" type="is-primary">計算する</b-button>
+      <b-button @click="reset" v-if="is_generate" type="is-primary is-light">リセットする</b-button>            
            
       
   </div>
@@ -195,7 +195,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #7957d5;
 }
 .button{
   margin:1rem auto
@@ -206,7 +206,7 @@ a {
 .generated{
   margin: 1rem auto;
   font-family: bold;
-  background-color: #effaf5 ;
+  background-color: #f5eeff ;
   border-radius: 5%;
   padding: 2rem;
 }

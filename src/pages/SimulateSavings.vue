@@ -1,7 +1,7 @@
 <template>
   <div class="page">
-    <h1>バイオガス生産量シミュレーター</h1>
-    <h2>どれくらいガスや電気が作れるのでしょうか？</h2>
+    <h1>内臓発電シミュレーター</h1>
+    <h2>内臓の分解でどれくらいガスが作れるでしょうか？</h2>
     <div class="simulate">
       <b-field label="年間処理頭数（頭/年） " >
           <b-input type="number" v-model="deer_numbers"></b-input>

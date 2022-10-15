@@ -5,7 +5,10 @@
             私たちの想い
         </router-link> | 
         <router-link to="/SimulateSavings">
-            バイオガス生産量シミュレーター
+            鹿の内臓を活用をしたい方
+        </router-link> | 
+        <router-link to="/SimulateBiogas">
+            空き地を活用したい方
         </router-link>
     </p>
 </div>

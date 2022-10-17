@@ -228,7 +228,7 @@ li {
 }
 @media (min-width: 824px) {
   .simulate{
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;

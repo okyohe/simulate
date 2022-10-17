@@ -11,12 +11,12 @@
           {{LabelWeight}}
         </b-radio>        
       </div>
-      <b-field v-if="calc_type=='area'">
-          <b-input type="number" v-model="AmountArea"></b-input>
+      <b-field class="field" v-if="calc_type=='area'">
+          <b-input v-model="AmountArea"></b-input>
       </b-field>      
       
-      <b-field v-if="calc_type=='weight'">
-          <b-input type="number" v-model="AmountCrop"></b-input>
+      <b-field class="field" v-if="calc_type=='weight'">
+          <b-input v-model="AmountCrop"></b-input>
       </b-field>          
       <div class="generated" v-show="is_generate">        
         <p>一年間で生産できるガス量は<span class="bold">{{amount_gas.toLocaleString()}}㎥</span>です。</p>
@@ -146,14 +146,11 @@ li {
 .bold{
   font-weight: bold;
 }
-.simulate{
-  width: 100%
 
-}
 
 @media (min-width: 824px) {
   .simulate{
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;

@@ -10,6 +10,9 @@
         <router-link to="/SimulateBiogas">
             空き地を活用したい方
         </router-link>
+        <router-link to="/SimulateWeed"> | 
+            世帯数から必要な雑草量を計算する
+        </router-link>
     </p>
 </div>
 </template>

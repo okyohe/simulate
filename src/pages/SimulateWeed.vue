@@ -45,7 +45,7 @@ export default {
               // var
               AmountHouses:60,           
               GasPerWeed: 60, //per ton
-              ConsumptionGas: 365, //per house
+              ConsumptionGas: 108, //per house
               SquarePerTon: 625, // ㎡ per ton
               
               // function

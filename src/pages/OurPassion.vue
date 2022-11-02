@@ -5,6 +5,7 @@
     <div class="slide">
       <h2>簡易説明資料</h2>      
       <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/b2b1680dcf62490684492819e4fd6ee7" title="日本シカ発電_超簡易説明資料" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"  data-ratio="1.78343949044586"></iframe>
+      <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/fbc68e9c34e14aebba8df644e4b154d5" title="シカくん初号機" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"  data-ratio="1.78343949044586"></iframe>
     </div>
     
     

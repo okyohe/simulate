@@ -1,11 +1,17 @@
 <template>
   <div class="page">
-    <h1>日本シカ発電</h1>
-    <h2>未利用資源から新たな循環をつくる</h2>
+    <h1>鹿ガス</h1>
+    <h2>鹿の力で、雑草を再生可能エネルギーに。</h2>
     <div class="slide">
-      <h2>簡易説明資料</h2>      
-      <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/b2b1680dcf62490684492819e4fd6ee7" title="日本シカ発電_超簡易説明資料" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"  data-ratio="1.78343949044586"></iframe>
+      <h3>簡易説明資料</h3>
+            
       <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/fbc68e9c34e14aebba8df644e4b154d5" title="シカくん初号機" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"  data-ratio="1.78343949044586"></iframe>
+    </div>
+    <div class="slide">
+      <h3>お問い合わせ</h3>
+      <p>詳しくはこちらからご連絡ください</p>
+      <a mailto="deerveryone@gmail.com">メール</a>  
+      <a href="https://www.facebook.com/yohei.watanabe.12/">代表Facebookメッセンジャー</a>
     </div>
     
     
@@ -35,6 +41,11 @@ h1{
   margin: 2rem auto 0rem;
 }
 h2 {
+  margin: 0.5rem auto 3rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+h3 {
   margin: 0.5rem auto 3rem;
   font-weight: bold;
   font-size: 1rem;

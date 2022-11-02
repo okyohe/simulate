@@ -4,9 +4,9 @@
         <router-link to="/OurPassion">
             私たちの想い
         </router-link> | 
-        <router-link to="/SimulateSavings">
+        <!-- <router-link to="/SimulateSavings">
             鹿の内臓を活用をしたい方
-        </router-link> | 
+        </router-link> |  -->
         <router-link to="/SimulateBiogas">
             空き地を活用したい方
         </router-link>

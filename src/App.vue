@@ -41,7 +41,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1.5rem auto;
+  /* margin: 1.5rem auto; */
   
 }
 header img{   

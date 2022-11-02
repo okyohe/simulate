@@ -38,7 +38,7 @@ export default {
 h1{
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 2rem auto 0rem;
+  margin: 0rem auto;
 }
 h2 {
   margin: 0.5rem auto 1rem;

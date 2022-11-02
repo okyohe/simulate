@@ -43,9 +43,9 @@ export default {
 
               // input data            
               // var
-              AmountHouses:60,           
+              AmountHouses:3,           
               GasPerWeed: 60, //per ton
-              ConsumptionGas: 108, //per house
+              ConsumptionGas: 360, //per house
               SquarePerTon: 625, // ㎡ per ton
               
               // function
@@ -66,7 +66,7 @@ export default {
       return Math.round(this.AmountWeed * this.SquarePerTon)
     },
     PriceGas: function(){
-      return Math.round(this.AmountGas * 690) //yen
+      return Math.round(this.AmountGas *45 / 95 * 720 ) //yen, 都市ガスの熱量/プロパンガスの熱量
     }
     // output            
   }

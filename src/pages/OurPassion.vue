@@ -4,13 +4,13 @@
     <h2>鹿の力で、雑草を再生可能エネルギーに。</h2>
     <div class="slide">
       <h3>簡易説明資料</h3>
-            
-      <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/fbc68e9c34e14aebba8df644e4b154d5" title="シカくん初号機" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"  data-ratio="1.78343949044586"></iframe>
+                  
+      <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/70fc2eb0290b48b3a2b360ea0a4580c9" title="シカくん初号機" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" data-ratio="1.78343949044586"></iframe>
     </div>
     <div class="slide">
       <h3>お問い合わせ</h3>
       <p>詳しくはこちらからご連絡ください</p>
-      <p><a mailto="deerveryone@gmail.com">メール</a></p>   
+      <p><a href='mailto:deerveryone@gmail.com?subject=Webサイトを見ました'>メール</a></p>   
       <p><a href="https://www.facebook.com/yohei.watanabe.12/">Facebookメッセンジャー</a></p>
     </div>
     

@@ -10,8 +10,8 @@
     <div class="slide">
       <h3>お問い合わせ</h3>
       <p>詳しくはこちらからご連絡ください</p>
-      <a mailto="deerveryone@gmail.com">メール</a> |   
-      <a href="https://www.facebook.com/yohei.watanabe.12/">Facebookメッセンジャー</a>
+      <p><a mailto="deerveryone@gmail.com">メール</a></p>   
+      <p><a href="https://www.facebook.com/yohei.watanabe.12/">Facebookメッセンジャー</a></p>
     </div>
     
     

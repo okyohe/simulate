@@ -11,6 +11,7 @@ Vue.use(Router)
 
 export default new Router({
   routes: [    
+    { path: '/', component: OurPassion, PageTitle:"VISION" },
     { path: '/OurPassion', component: OurPassion, PageTitle:"VISION" },
     { path: '/SimulateSavings', component: SimulateSavings, PageTitle:"VISION"  },
     { path: '/SimulateBiogas', component: SimulateBiogas, PageTitle:"BIOGAS"  },

@@ -10,8 +10,8 @@
     <div class="slide">
       <h3>お問い合わせ</h3>
       <p>詳しくはこちらからご連絡ください</p>
-      <a mailto="deerveryone@gmail.com">メール</a>  
-      <a href="https://www.facebook.com/yohei.watanabe.12/">代表Facebookメッセンジャー</a>
+      <a mailto="deerveryone@gmail.com">メール</a> |   
+      <a href="https://www.facebook.com/yohei.watanabe.12/">Facebookメッセンジャー</a>
     </div>
     
     
@@ -41,12 +41,12 @@ h1{
   margin: 2rem auto 0rem;
 }
 h2 {
-  margin: 0.5rem auto 3rem;
+  margin: 0.5rem auto 1rem;
   font-weight: bold;
   font-size: 1rem;
 }
 h3 {
-  margin: 0.5rem auto 3rem;
+  margin: 3rem auto 1rem;
   font-weight: bold;
   font-size: 1rem;
 }

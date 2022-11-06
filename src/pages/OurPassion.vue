@@ -6,6 +6,7 @@
       <h3>簡易説明資料</h3>
                   
       <iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/70fc2eb0290b48b3a2b360ea0a4580c9" title="シカくん初号機" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" data-ratio="1.78343949044586"></iframe>
+      
     </div>
     <div class="slide">
       <h3>お問い合わせ</h3>
@@ -53,12 +54,16 @@ h3 {
 iframe{
   border: 0px; 
   background: padding-box padding-box rgba(0, 0, 0, 0.1); 
-  margin: 0px; 
+  margin: 0 auto; 
   padding: 0px; 
   border-radius: 6px; 
   box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; 
-  max-width: 100%; 
-  width: 560px;
-  height: 314px;
+  max-width: 95%; 
+  width: auto;  
+}
+@media (min-width: 824px) {
+  iframe{
+    height:auto ;
+  }
 }
 </style>
